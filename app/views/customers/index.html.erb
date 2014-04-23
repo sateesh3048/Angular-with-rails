@@ -1,0 +1,23 @@
+<div ng-controller="CustomersCtrl">
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name:</th>
+        <th>Email:</th>
+        <th>Age:</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="customer in customers">
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.age}}</td>
+        <td><a href="" ng-click="deleteCustomer(customer.id)">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> Do u wanna add new customer?
+  <a href="#/addCustomer"> click here </a>
+></p>
+</div>
