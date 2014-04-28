@@ -1,16 +1,34 @@
-<div>
-  <p>Welcome to Show Details</p>
-  <div>
-    <label>Name:</label>
-    <span>{{customer.name}}</span>
+<div class="row">
+  <div class="col-md-8">
+    <h3 class="h3_title">Welcome to Show Customer Details</h3>
   </div>
-  <div>
-    <label>Email:</label>
-    <span>{{customer.email}}</span>
+</div>
+<div class="row">
+  <div class="col-md-1">
+    <label>Name</label>
   </div>
-  <div>
-    <label>AGe:</label>
-    <span>{{customer.age}}</span>
+  <div class="col-md-7">
+    {{customer.name}}
   </div>
-  <p><a href="#/">Back</a></p>
+</div>
+<div class="row">
+  <div class="col-md-1">
+    <label>Email</label>
+  </div>
+  <div class="col-md-7">
+    {{customer.email}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-1">
+    <label>Age</label>
+  </div>
+  <div class="col-md-7">
+    {{customer.age}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a href="#/" class="btn btn-primary">Go Back</a>
+  </div>
 </div>
