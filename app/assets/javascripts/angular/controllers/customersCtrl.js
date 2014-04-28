@@ -14,12 +14,14 @@ app.controller("CustomersCtrl",['$scope','Customer', '$location','$routeParams',
     }
   };
  
-  $scope.addCustomer = function(){
+  $scope.addCustomer = function(invalid){
+    if(invalid) return;
     Customer.create($scope.customer);
     $location.path("/");
   };
   
-  $scope.updateCustomer = function(){
+  $scope.updateCustomer = function(invalid){
+    if(invalid) return;
     Customer.update($scope.customer);
     $location.path("/");
   };

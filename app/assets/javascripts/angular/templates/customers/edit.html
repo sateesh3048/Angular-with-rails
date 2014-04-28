@@ -1,22 +1,26 @@
-<form ng-submit="updateCustomer()" class="form-horizontal">
+<form ng-submit="updateCustomer(edit_customer_form.$invalid)" class="form-horizontal" name="edit_customer_form" novalidate ng-class="{submitted:submitted}">
   <fieldset>
     <legend>Edit Customer Details:</legend>
     <div class="form-group">
       <label class="col-md-4 control-label" for="name">Customer Name:</label>
       <div class="col-md-4">
-        <input type="text" ng-model="customer.name" placeholder="Enter Customer Name" class="form-control input-md">
+        <input type="text" ng-model="customer.name" placeholder="Enter Customer Name" class="form-control input-md" ng-required="true">
+        <p class="help-block red" ng-show="submitted && edit_customer_form.name.$error.required">Name should not be blank!</p>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-md-4" for="email"> Customer Email:</label>
       <div class="col-md-4">
-        <input type="text" ng-model="customer.email" placeholder="Enter Customer Email" class="input-md form-control">
+        <input type="email" ng-model="customer.email" placeholder="Enter Customer Email" class="input-md form-control" ng-required="true">
+        <p class="help-block red" ng-show="submitted && edit_customer_form.email.$error.required">Email should not be blank!</p>
+        <p class="help-block red" ng-show="submitted && edit_customer_form.$error.email"> Not an valid email!</p>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-md-4" for="age">Customer Age:</label>
       <div class="col-md-4">
         <select ng-model="customer.age" class="form-control">
+          <option value="">Select Age </option>
           <option ng-repeat="n in [] | range:100">{{$index+1}}</option>
         </select>
       </div>
@@ -24,7 +28,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label"></label>
       <div class="col-md-4">
-        <input type="submit" value="Update Customer" class="btn btn-primary col-md-pull-1" />
+        <input type="submit" value="Update Customer" class="btn btn-primary col-md-pull-1" ng-click="submitted=true"/>
         <a href="#/" class="btn btn-danger col-md-pull-2">Cancel</a>
       </div> 
     </div>
