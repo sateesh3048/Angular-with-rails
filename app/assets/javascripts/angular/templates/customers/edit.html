@@ -1,20 +1,30 @@
-<div>
-  <form ng-submit="updateCustomer()">
-    <div>
-      <lable>Customer Name:</lable>
-      <input type="text" ng-model="customer.name">
+<form ng-submit="updateCustomer()" class="form-horizontal">
+  <fieldset>
+    <legend>Edit Customer Details:</legend>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="name">Customer Name:</label>
+      <div class="col-md-4">
+        <input type="text" ng-model="customer.name" placeholder="Enter Customer Name" class="form-control input-md">
+      </div>
     </div>
-    <div>
-      <lable>Customer Email:</lable>
-      <input type="text" ng-model="customer.email">
+    <div class="form-group">
+      <label class="control-label col-md-4" for="email"> Customer Email:</label>
+      <div class="col-md-4">
+        <input type="text" ng-model="customer.email" placeholder="Enter Customer Email" class="input-md form-control">
+      </div>
     </div>
-    <div>
-      <lable>Customer Age:</lable>
-      <input type="text" ng-model="customer.age">
+    <div class="form-group">
+      <label class="control-label col-md-4" for="age">Customer Age:</label>
+      <div class="col-md-4">
+        <input type="text" ng-model="customer.age" placeholder="Enter Customer Age" class="input-md form-control">
+      </div>
     </div>
-    <div>
-      <input type="submit" value="updateCustomer"/>
+    <div class="form-group">
+      <label class="col-md-4 control-label"></label>
+      <div class="col-md-4">
+        <input type="submit" value="Update Customer" class="btn btn-primary col-md-pull-1" />
+        <a href="#/" class="btn btn-danger col-md-pull-2">Cancel</a>
+      </div> 
     </div>
-  </form>
-  <p><a href="#/">Back</a></p>
-</div>
+  </fieldset>
+</form>
