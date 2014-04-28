@@ -5,8 +5,22 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="assets/Libraries/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/Libraries/bootstrap-theme.css">
+    <script src="assets/Libraries/bootstrap.js"></script>
   </head>
   <body>
-    <div ng-view></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div ng-view></div>
+      </div>
+      <div class="col-md-4">
+        <h3>About Website Author</h3>
+        <p>Hi this is sateesh kambhampati.Working on angular with ruby on rails.</p>
+      </div>
+    </div>
+  </div>
+    
   </body>
 </html>
