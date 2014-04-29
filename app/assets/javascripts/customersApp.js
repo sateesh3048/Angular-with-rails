@@ -1,4 +1,4 @@
-app = angular.module("customersApp", ['ngRoute', 'ngResource']);
+app = angular.module("customersApp", ['ngRoute', 'ngResource', 'ui.bootstrap']);
 app.filter('range', function() {
   return function(input, total) {
     total = parseInt(total);

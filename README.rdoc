@@ -2,11 +2,17 @@
 
 Here I have created new rails app using rails 4 and  ruby-2.1.1.
 
-I have used angularjs-rails gem in gemfile.
+I have used angularjs-rails gem in gemfile for working with angular.
 
 I have used rails  as api service.
 
 I have written angular code under  angular directory in javascript folder
+
+I have added boostrap js and css files under Libraries folder in Js, Css.
+
+I have added bootstrap design for all pages.
+
+I have added pagination for customers list using ui-bootstrap angular library.
 
 
 
